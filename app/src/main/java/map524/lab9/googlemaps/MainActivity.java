@@ -18,7 +18,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MainActivity extends FragmentActivity
         implements OnMapReadyCallback, LocationListener {
 
-    LocationManager locationManager;
+    private LocationManager locationManager;
     private GoogleMap mMap;
 
     @Override
@@ -53,7 +53,8 @@ public class MainActivity extends FragmentActivity
         latitude.setText(Double.toString(location.getLatitude()));
         longitude.setText(Double.toString(location.getLongitude()));
 
-        if(location != null) {
+        //if(location != null)
+        {
             //reference from http://www.techotopia.com/index.php/Working_with_the_Google_Maps_Android_API_in_Android_Studio#Adding_a_Map_to_an_Application
             mMap.clear();
             mMap.addMarker(new MarkerOptions()
